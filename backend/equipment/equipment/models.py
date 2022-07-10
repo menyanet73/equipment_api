@@ -16,6 +16,8 @@ class EquipmentType(models.Model):
         verbose_name_plural = 'Типы оборудования'
 
     def _get_regex(self):
+        """Преобразует маску в regex строку
+        для валидации серийного номера оборудования"""
         regex_string = r''
         for symbol in self.sn_mask:
             regex_string += MASK_SYMBOLS[symbol]

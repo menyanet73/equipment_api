@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'equipment',
-    'api'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -96,7 +96,15 @@ MASK_SYMBOLS = {'N': '\d',
                 'X': '[A-Z, 0-9]',
                 'Z': '[-,_,@]'}
 
+AUTH_USER_MODEL = 'users.User'
+
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'users.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
 }

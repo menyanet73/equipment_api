@@ -19,6 +19,8 @@ class EquipmentSerializer(serializers.ModelSerializer):
         read_only_fields = ['is_deleted',]
 
     def validate(self, attrs):
+        """Валидация серийного номера,
+        на соответствие маске типа оборудования"""
         equipment_type = attrs.get('equipment_type')
         serial_number = attrs.get('serial_number')
         sn_mask_regex = equipment_type._get_regex()
