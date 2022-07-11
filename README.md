@@ -44,14 +44,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 #ENDPOINTS:
-GET:/api/equipment - get equipment list
-GET:/api/equipment/{id} - get equipment item
-POST:/api/equipment - create equipment item, request fields: {"equipment_type":int(id), "serial_number":string(serial_number validated for type mask)
-PUT:/api/equipment/{id} - update equipment item fields
-DELETE:/api/equipment/{id} - soft delete equipment item
-GET:/api/equipment-type - get equipment type list 
-POST:/api/user/create - signup form, create user, request fields: {"username":string(username), "password":string(password)}
-POST:/api/user/login - signin form, create bearer token, request fields: {"username":string(username), "password":string(password)}
+GET:/api/equipment - get equipment list <br>
+GET:/api/equipment/{id} - get equipment item <br>
+POST:/api/equipment - create equipment item, request fields: {"equipment_type":int(id), "serial_number":string(serial_number validated for type mask) <br>
+PUT:/api/equipment/{id} - update equipment item fields <br>
+DELETE:/api/equipment/{id} - soft delete equipment item <br>
+GET:/api/equipment-type - get equipment type list  <br>
+POST:/api/user/create - signup form, create user, request fields: {"username":string(username), "password":string(password)} <br>
+POST:/api/user/login - signin form, create bearer token, request fields: {"username":string(username), "password":string(password)} <br>
 
 
 
