@@ -43,7 +43,7 @@ python manage.py migrate
 ```sh
 python manage.py runserver
 ```
-#ENDPOINTS:
+# ENDPOINTS:
 GET:/api/equipment - get equipment list <br>
 GET:/api/equipment/{id} - get equipment item <br>
 POST:/api/equipment - create equipment item, request fields: {"equipment_type":int(id), "serial_number":string(serial_number validated for type mask) <br>
